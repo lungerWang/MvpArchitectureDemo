@@ -1,5 +1,5 @@
 # MvpArchitectureDemo
-A demo shows how Clean Architecture which base on MVP pattern works in android project. Also use retrofit &amp; rxjava
+A demo shows how Clean Architecture which base on MVP pattern works in android project. Also use network framwork retrofit &amp; rxjava
 
 CleanArchitecture guide : http://blog.chengdazhi.com/index.php/101  (中文); 
 <br />
