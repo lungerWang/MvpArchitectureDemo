@@ -8,6 +8,8 @@ import com.example.lunger.domain.model.ParentLibListModel;
 import com.example.lunger.presenter.AbstractPresenter;
 import com.example.lunger.presenter.GetParentLibPresenter;
 
+import javax.inject.Inject;
+
 /**
  * Created by Lunger on 2016/10/20.
  * 爸妈图书馆Presneter
@@ -22,6 +24,7 @@ public class GetParentLibPresenterImpl extends AbstractPresenter implements GetP
      * @param commodityRepository 请求的仓库
      * @param view View层实例
      */
+    @Inject
     public GetParentLibPresenterImpl(ParentRepository commodityRepository, View view) {
         this.commodityRepository = commodityRepository;
         this.view = view;

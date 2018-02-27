@@ -10,6 +10,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.lunger.R;
+import com.example.lunger.dagger.DaggerMainActivityComponent;
+import com.example.lunger.dagger.PresenterModule;
 import com.example.lunger.data.net.impl.RepositoryNetManagerImpl;
 import com.example.lunger.data.param.ParentLibParam;
 import com.example.lunger.data.repository.RepositoryManager;
@@ -23,13 +25,16 @@ import com.example.lunger.view.event.MainEvent;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.inject.Inject;
+
 /**
  * Created by Lunger on 2017/04/01.
  * CleanArchitecture base on MVP pattern，业务与视图真正分离，低耦合，方便拓展，代码嵌套少阅读性好
  */
 public class MainActivity extends BaseActivity<MainEvent> implements GetParentLibPresenter.View {
 
-    private GetParentLibPresenter mGetParentLibPresenter;//一个接口操作对应一个Presenter
+    @Inject
+    GetParentLibPresenter mGetParentLibPresenter;//一个接口操作对应一个Presenter
     private List<ParentLibListModel.List> parentList = new ArrayList<>();
     private ParentLibListAdapter mAdapter;
     private TextView tv_test_event_bus;
@@ -40,8 +45,10 @@ public class MainActivity extends BaseActivity<MainEvent> implements GetParentLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        DaggerMainActivityComponent.builder().presenterModule(new PresenterModule(this,
+                RepositoryNetManagerImpl.getRepositoryManager().getParentRepository())).build().inject(this);
         initWidget();
-        initPresenter();
+        //initPresenter();
         getData();
     }
 
@@ -65,11 +72,12 @@ public class MainActivity extends BaseActivity<MainEvent> implements GetParentLi
 
     /**
      * EventBus事件通知
+     *
      * @param event
      */
     @Override
     public void onEventMainThread(MainEvent event) {
-        switch (event.getEventId()){
+        switch (event.getEventId()) {
             case MainEvent.TYPE_ONE:
                 String message = (String) event.getData();
                 tv_test_event_bus.setText(message);
@@ -82,6 +90,7 @@ public class MainActivity extends BaseActivity<MainEvent> implements GetParentLi
 
     /**
      * 一个接口数据获取成功回调
+     *
      * @param data
      */
     @Override
@@ -92,6 +101,7 @@ public class MainActivity extends BaseActivity<MainEvent> implements GetParentLi
 
     /**
      * 一个接口失败回调
+     *
      * @param failCode
      * @param errorMsg
      */
