@@ -8,7 +8,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 /**
- * Created by Lunger on 2016/5/31.
+ * Created by Allen on 2016/5/31.
  * 请求拦截器，可选
  */
 public class RequestInterceptor implements Interceptor {

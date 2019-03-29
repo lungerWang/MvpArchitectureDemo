@@ -1,7 +1,7 @@
 package com.example.lunger.domain.exception;
 
 /**
- * Created by Lunger on 2017/04/01.
+ * Created by Allen on 2017/04/01.
  * 异常的类型
  */
 public enum  ErrorCode {

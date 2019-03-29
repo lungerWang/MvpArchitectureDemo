@@ -3,7 +3,7 @@ package com.example.lunger.domain.model;
 import java.io.Serializable;
 
 /**
- * Created by Lunger on 2016/5/30.
+ * Created by Allen on 2016/5/30.
  */
 public class BaseModel implements Serializable {
 

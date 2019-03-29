@@ -6,7 +6,7 @@ import com.example.lunger.data.repository.ParentRepository;
 import rx.Observable;
 
 /**
- * Created by Lunger on 2017/04/01.
+ * Created by Allen on 2017/04/01.
  * Presenter的网络请求分离到Interactor
  */
 public class GetParentLibInteractor extends AbstractInteractor {

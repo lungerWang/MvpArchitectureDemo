@@ -1,7 +1,7 @@
 package com.example.lunger.presenter;
 
 /**
- * Created by Lunger on 2017/03/30
+ * Created by Allen on 2017/03/30
  * 可以与Activity的生命周期绑定起来，可选择性使用
  */
 public interface BasePresenter {

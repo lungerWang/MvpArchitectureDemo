@@ -3,14 +3,14 @@ package com.example.lunger.data.param;
 import java.io.Serializable;
 
 /**
- * Created by Lunger on 2017/3/31.
+ * Created by Allen on 2017/3/31.
  * 具体请求所用的参数封装
  */
 
 public class ParentLibParam implements Serializable {
 
     private String token;
-    private String catid;
+    private String categoryId;
     private String page;
 
     public String getToken() {
@@ -21,12 +21,12 @@ public class ParentLibParam implements Serializable {
         this.token = token;
     }
 
-    public String getCatid() {
-        return catid;
+    public String getCategoryId() {
+        return categoryId;
     }
 
-    public void setCatid(String catid) {
-        this.catid = catid;
+    public void setCategoryId(String categoryId) {
+        this.categoryId = categoryId;
     }
 
     public String getPage() {

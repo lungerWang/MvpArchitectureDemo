@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
- * Created by Lunger on 2017/3/31.
+ * Created by Allen on 2017/3/31.
  * 爸媽圖書館list数据
  */
 public class ParentLibListModel implements Serializable{

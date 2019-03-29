@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
- * Created by Lunger on 2017/3/31.
+ * Created by Allen on 2017/3/31.
  * ListView适配器ViewHolder的封装
  */
 
@@ -27,7 +27,7 @@ public class ViewHolder {
     }
 
     public static ViewHolder get(Context context, View convertView, ViewGroup parent, int layoutId, int position) {
-        return convertView == null?new ViewHolder(context, parent, layoutId, position):(ViewHolder)convertView.getTag();
+        return convertView == null ? new ViewHolder(context, parent, layoutId, position) : (ViewHolder) convertView.getTag();
     }
 
     public View getConvertView() {
@@ -36,7 +36,7 @@ public class ViewHolder {
 
     public <T extends View> T getView(int viewId) {
         View view = this.mViews.get(viewId);
-        if(view == null) {
+        if (view == null) {
             view = this.mConvertView.findViewById(viewId);
             this.mViews.put(viewId, view);
         }
@@ -44,19 +44,19 @@ public class ViewHolder {
     }
 
     public ViewHolder setText(int viewId, String text) {
-        TextView view = (TextView)this.getView(viewId);
+        TextView view = (TextView) this.getView(viewId);
         view.setText(text);
         return this;
     }
 
     public ViewHolder setImageResource(int viewId, int drawableId) {
-        ImageView view = (ImageView)this.getView(viewId);
+        ImageView view = (ImageView) this.getView(viewId);
         view.setImageResource(drawableId);
         return this;
     }
 
     public ViewHolder setImageBitmap(int viewId, Bitmap bm) {
-        ImageView view = (ImageView)this.getView(viewId);
+        ImageView view = (ImageView) this.getView(viewId);
         view.setImageBitmap(bm);
         return this;
     }

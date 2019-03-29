@@ -7,7 +7,7 @@ import rx.Scheduler;
 import rx.android.schedulers.AndroidSchedulers;
 
 /**
- * Created by Lunger on 2017/04/01.
+ * Created by Allen on 2017/04/01.
  * 主线程
  */
 public class UIThread implements MainThread {

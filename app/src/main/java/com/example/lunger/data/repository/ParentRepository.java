@@ -7,7 +7,7 @@ import com.example.lunger.domain.model.ParentLibListModel;
 import rx.Observable;
 
 /**
- * Created by Lunger on 2017/3/30.
+ * Created by Allen on 2017/3/30.
  */
 public interface ParentRepository {
 

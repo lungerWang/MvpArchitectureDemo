@@ -8,7 +8,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by Lunger on 2016/2/17.
+ * Created by Allen on 2016/2/17.
  * 线程池
  */
 public class ThreadPoolExecutor implements ThreadExecutor {

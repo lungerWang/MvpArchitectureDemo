@@ -14,7 +14,7 @@ import com.example.lunger.view.event.MainEvent;
 import de.greenrobot.event.EventBus;
 
 /**
- * Created by Lunger on 2017/04/01.
+ * Created by Allen on 2017/04/01.
  * 测试EventBus
  */
 public class SecondActivity extends BaseActivity {
@@ -33,7 +33,7 @@ public class SecondActivity extends BaseActivity {
             public void onClick(View v) {
                 String msg = editText.getText().toString();
                 if (!TextUtils.isEmpty(msg)) {
-                    MainEvent event =  MainEvent.getInstance(MainEvent.TYPE_ONE);
+                    MainEvent event = MainEvent.getInstance(MainEvent.TYPE_ONE);
                     event.setData(msg);
                     EventBus.getDefault().post(event);
                     finish();

@@ -8,8 +8,8 @@ import android.view.ViewGroup;
 import java.util.List;
 
 /**
- * Created by Lunger on 2017/3/31.
- * ListView 适配器的封装
+ * Created by Allen on 2017/3/31.
+ * ListView BaseAdapter的封装
  */
 
 public abstract class BaseBKAdapter<T> extends android.widget.BaseAdapter {
@@ -26,10 +26,16 @@ public abstract class BaseBKAdapter<T> extends android.widget.BaseAdapter {
     }
 
     public int getCount() {
+        if (mList == null) {
+            return 0;
+        }
         return this.mList.size();
     }
 
     public T getItem(int position) {
+        if (mList == null) {
+            return null;
+        }
         return this.mList.get(position);
     }
 
@@ -43,7 +49,7 @@ public abstract class BaseBKAdapter<T> extends android.widget.BaseAdapter {
         return viewHolder.getConvertView();
     }
 
-    public abstract void convert(ViewHolder var1, T var2, int var3);
+    public abstract void convert(ViewHolder holder, T data, int position);
 
     private ViewHolder getViewHolder(int position, View convertView, ViewGroup parent) {
         return ViewHolder.get(this.mContext, convertView, parent, this.mItemLayoutId, position);

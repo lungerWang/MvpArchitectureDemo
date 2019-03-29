@@ -9,7 +9,7 @@ import com.example.lunger.presenter.AbstractPresenter;
 import com.example.lunger.presenter.GetParentLibPresenter;
 
 /**
- * Created by Lunger on 2016/10/20.
+ * Created by Allen on 2016/10/20.
  * 爸妈图书馆Presneter
  */
 public class GetParentLibPresenterImpl extends AbstractPresenter implements GetParentLibPresenter {
@@ -38,7 +38,7 @@ public class GetParentLibPresenterImpl extends AbstractPresenter implements GetP
         view.showProgress();
         //请求参数的构造
         ParentLibParam param = new ParentLibParam();
-        param.setCatid(page);
+        param.setCategoryId(page);
         param.setPage("1");
         //Interactor类用于执行请求，一个接口对应一个Interactor
         GetParentLibInteractor interactor = new GetParentLibInteractor(commodityRepository, param);

@@ -8,7 +8,7 @@ import de.greenrobot.event.EventBus;
 
 
 /**
- * Created by Lunger on 2017/3/31.
+ * Created by Allen on 2017/3/31.
  * 在每个Activity基类里面注册EventBus
  */
 

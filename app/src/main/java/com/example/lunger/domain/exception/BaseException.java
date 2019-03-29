@@ -1,7 +1,7 @@
 package com.example.lunger.domain.exception;
 
 /**
- * Created by Lunger on 2016/10/14.
+ * Created by Allen on 2016/10/14.
  * 异常的封装
  */
 public class BaseException extends RuntimeException {

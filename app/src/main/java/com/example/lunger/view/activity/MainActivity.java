@@ -24,7 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Lunger on 2017/04/01.
+ * Created by Allen on 2017/04/01.
  * CleanArchitecture base on MVP pattern，业务与视图真正分离，低耦合，方便拓展，代码嵌套少阅读性好
  */
 public class MainActivity extends BaseActivity<MainEvent> implements GetParentLibPresenter.View {
@@ -65,11 +65,12 @@ public class MainActivity extends BaseActivity<MainEvent> implements GetParentLi
 
     /**
      * EventBus事件通知
+     *
      * @param event
      */
     @Override
     public void onEventMainThread(MainEvent event) {
-        switch (event.getEventId()){
+        switch (event.getEventId()) {
             case MainEvent.TYPE_ONE:
                 String message = (String) event.getData();
                 tv_test_event_bus.setText(message);
@@ -82,6 +83,7 @@ public class MainActivity extends BaseActivity<MainEvent> implements GetParentLi
 
     /**
      * 一个接口数据获取成功回调
+     *
      * @param data
      */
     @Override
@@ -92,6 +94,7 @@ public class MainActivity extends BaseActivity<MainEvent> implements GetParentLi
 
     /**
      * 一个接口失败回调
+     *
      * @param failCode
      * @param errorMsg
      */

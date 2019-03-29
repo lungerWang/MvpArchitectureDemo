@@ -1,7 +1,7 @@
 package com.example.lunger.view.event;
 
 /**
- * Created by Lunger on 2017/3/31.
+ * Created by Allen on 2017/3/31.
  * EventBus event基类
  */
 

@@ -5,7 +5,7 @@ import com.example.lunger.data.repository.ParentRepository;
 import com.example.lunger.data.repository.RepositoryManager;
 
 /**
- * Created by Lunger on 2016/5/31.
+ * Created by Allen on 2016/5/31.
  * 单例的网络请求统一管理类，工厂模式
  */
 public class RepositoryNetManagerImpl implements RepositoryManager {
@@ -16,6 +16,7 @@ public class RepositoryNetManagerImpl implements RepositoryManager {
 
     /**
      * 获取总Repository
+     *
      * @return
      */
     public static RepositoryManager getRepositoryManager() {
@@ -28,6 +29,7 @@ public class RepositoryNetManagerImpl implements RepositoryManager {
 
     /**
      * 获取爸妈图书馆Repository
+     *
      * @return
      */
     @Override

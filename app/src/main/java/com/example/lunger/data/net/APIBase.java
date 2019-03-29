@@ -15,32 +15,32 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 
 /**
- * Created by Lunger on 2016/5/30.
+ * Created by Allen on 2016/5/30.
  * 请求构建
  */
 public abstract class APIBase {
 
-    public <T> T getService(final Class<T> clazz){
+    public <T> T getService(final Class<T> clazz) {
         OkHttpClient client = new OkHttpClient()
-                .newBuilder()
-                .build();
+            .newBuilder()
+            .build();
         return getService(clazz, client);
     }
 
-    public <T> T getService(final Class<T> clazz, OkHttpClient client){
+    public <T> T getService(final Class<T> clazz, OkHttpClient client) {
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(UrlConstant.SERVER_ADDRESS)
-                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
-                .client(client)
-                .addConverterFactory(GsonConverterFactory.create(new Gson()))
-                .build();
+            .baseUrl(UrlConstant.SERVER_ADDRESS)
+            .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+            .client(client)
+            .addConverterFactory(GsonConverterFactory.create(new Gson()))
+            .build();
 
         T service = retrofit.create(clazz);
 
         return service;
     }
 
-    public  <T , K extends Call<T>> T call(K call) {
+    public <T, K extends Call<T>> T call(K call) {
         T resultDTO = null;
         try {
             Response<T> execute = call.execute();

@@ -9,7 +9,7 @@ import retrofit2.http.POST;
 import rx.Observable;
 
 /**
- * Created by Lunger on 2016/5/30.
+ * Created by Allen on 2016/5/30.
  */
 public interface ParentNetService {
 

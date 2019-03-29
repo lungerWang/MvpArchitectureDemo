@@ -12,8 +12,7 @@ import com.example.lunger.view.base.ViewHolder;
 import java.util.List;
 
 /**
- * Created by Lunger on 2017/04/01.
- *
+ * Created by Allen on 2017/04/01.
  */
 public class ParentLibListAdapter extends BaseBKAdapter<ParentLibListModel.List> {
 
@@ -25,8 +24,8 @@ public class ParentLibListAdapter extends BaseBKAdapter<ParentLibListModel.List>
     }
 
     @Override
-    public void convert(final ViewHolder holder, ParentLibListModel.List item, final int position) {
-        holder.setText(R.id.tv_title, item.getTitle());
+    public void convert(final ViewHolder holder, ParentLibListModel.List data, final int position) {
+        holder.setText(R.id.tv_title, data.getTitle());
 
     }
 

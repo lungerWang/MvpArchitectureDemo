@@ -1,7 +1,7 @@
 package com.example.lunger.view.base;
 
 /**
- * Created by Lunger on 2017/3/31.
+ * Created by Allen on 2017/3/31.
  * This interface represents a basic view. All views should implement these common methods.
  */
 public interface BaseView {

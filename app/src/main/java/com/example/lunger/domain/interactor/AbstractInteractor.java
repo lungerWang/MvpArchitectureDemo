@@ -15,7 +15,7 @@ import rx.subscriptions.Subscriptions;
 
 /**
  * Alter by sky on 2016/10/17
- * Created by Lunger on 2016/5/17.
+ * Created by Allen on 2016/5/17.
  */
 public abstract class AbstractInteractor {
     /**

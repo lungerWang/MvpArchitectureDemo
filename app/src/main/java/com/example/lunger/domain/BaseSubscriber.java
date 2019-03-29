@@ -11,7 +11,7 @@ import java.net.UnknownHostException;
 import rx.Subscriber;
 
 /**
- * Created by Lunger on 2016/10/14.
+ * Created by Allen on 2016/10/14.
  * BaseSubscriber主要是对请求失败的一些预处理，采用责任链设计模式，
  * 如果子类onError(errorCode.getErrorCode(), errorMsg)返回true，则错误由子类去自己处理，返回false则在这里统一处理；
  */

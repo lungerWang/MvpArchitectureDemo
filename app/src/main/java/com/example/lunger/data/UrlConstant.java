@@ -1,7 +1,7 @@
 package com.example.lunger.data;
 
 /**
- * Created by Lunger on 2017/3/31.
+ * Created by Allen on 2017/3/31.
  */
 
 public interface UrlConstant {

@@ -5,7 +5,7 @@ import com.example.lunger.domain.model.ParentLibListModel;
 import com.example.lunger.view.base.BaseView;
 
 /**
- * Created by Lunger on 2016/10/20.
+ * Created by Allen on 2016/10/20.
  * 每个PresnetgerImpl都有自己对应的父类，在父类里定义P层和V层之间通信的接口（回调）
  */
 public interface GetParentLibPresenter {
